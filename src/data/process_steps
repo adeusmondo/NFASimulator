@@ -1,0 +1,47 @@
+
+
+-------------
+INPUT : [0100101101010]
+Estado inicial -> q1
+Simbolo lido -> 0
+Estados correntes -> q1 q1
+Simbolo lido -> 1
+Estados correntes -> q1 q1 q1
+Simbolo lido -> 0
+Estados correntes -> q1 q1 q1 q1
+Simbolo lido -> 0
+Estados correntes -> q1 q1 q1 q1 q2
+Simbolo lido -> 0
+Estados correntes -> q1 q1 q1 q1 q2 q3
+
+-------------
+INPUT : [1010010111011]
+Estado inicial -> q1
+Simbolo lido -> 1
+Estados correntes -> q1 q1
+Simbolo lido -> 0
+Estados correntes -> q1 q1 q1
+Simbolo lido -> 0
+Estados correntes -> q1 q1 q1 q2
+Simbolo lido -> 1
+Estados correntes -> q1 q1 q1 q2 q3
+Simbolo lido -> 0
+Estados correntes -> q1 q1 q1 q2 q3 q4
+Simbolo lido -> 0
+Estados correntes -> q1 q1 q1 q2 q3 q4 q4
+Simbolo lido -> 1
+Estados correntes -> q1 q1 q1 q2 q3 q4 q4 q4
+Simbolo lido -> 0
+Estados correntes -> q1 q1 q1 q2 q3 q4 q4 q4 q4
+Simbolo lido -> 1
+Estados correntes -> q1 q1 q1 q2 q3 q4 q4 q4 q4 q4
+Simbolo lido -> 1
+Estados correntes -> q1 q1 q1 q2 q3 q4 q4 q4 q4 q4 q4
+Simbolo lido -> 1
+Estados correntes -> q1 q1 q1 q2 q3 q4 q4 q4 q4 q4 q4 q4
+Simbolo lido -> 0
+Estados correntes -> q1 q1 q1 q2 q3 q4 q4 q4 q4 q4 q4 q4 q4
+Simbolo lido -> 1
+Estados correntes -> q1 q1 q1 q2 q3 q4 q4 q4 q4 q4 q4 q4 q4 q4
+Simbolo lido -> 1
+Estados correntes -> q1 q1 q1 q2 q3 q4 q4 q4 q4 q4 q4 q4 q4 q4 q4
