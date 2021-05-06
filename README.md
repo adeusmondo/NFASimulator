@@ -39,3 +39,11 @@ python3 -m src.nfa
 ## Running the project in repl.it
 
 You can [access here](https://replit.com/@carlosmondo/NFASimulator)
+
+## DATA
+
+In src / data are the input and output files for this NFA.
+
+The files `definition_automaton` and `inputs` you must fill in with the definition of the automation and the inputs to be executed.
+
+The files `accepted_states` and `process_steps` are the results of the processes

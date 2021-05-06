@@ -101,24 +101,24 @@ class NFA:
     with open(consts.PROCESS_STEPS, 'w') as f:
       for inputs in self.inputs:
         current_states = ""
-        current_states += (str(self.initial_state))
         next_states = [str(self.initial_state)]
 
         f.write(f"\n\n-------------\nINPUT : [{inputs}]\n")
         f.write(f"Estado inicial -> {current_states}")
         for alphabet_input in inputs:
           for next_state in next_states:
+            current_states += " " + str(next_state)
             if next_state == "*":
               continue
             all_transitions = self._info.get("transitions")
             all_states_transitions = all_transitions.get(next_state)
             transition_states_alphabet_input = all_states_transitions.get(alphabet_input)
             next_states = transition_states_alphabet_input
-            current_states += " " + str(next_state)
             f.write(f"\nSimbolo lido -> {alphabet_input}")
             f.write(f"\nEstados correntes -> {current_states}")
-            
-        if next_states in self.final_state:
+            print()
+        
+        if next_state in self.final_state:
           self._accepted_state[inputs]["accepted"] = True
         else:
           self._accepted_state[inputs]["accepted"] = False
@@ -131,22 +131,23 @@ class NFA:
 # {
 #   'q1': {
 #     '0': ['q1'], 
-#     '1': ['q1', 'q2'], 
-#     'E': ['*']
+#     '1': ['q2'],
 #   }, 
 #   'q2': {
 #     '0': ['q3'], 
 #     '1': ['*'], 
-#     'E': ['q3']
 #   }, 
 #   'q3': {
 #     '0': ['*'], 
 #     '1': ['q4'], 
-#     'E': ['*']
 #   }, 
 #   'q4': {
 #     '0': ['q4'], 
 #     '1': ['q4'], 
-#     'E': ['*']
 #   }
 # }
+# 010010110
+# 010101
+# q1 . q1 .
+# INICIAL : q1
+# FINAL : q4
